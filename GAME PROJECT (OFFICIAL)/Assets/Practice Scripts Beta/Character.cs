@@ -1,0 +1,12 @@
+using UnityEngine;
+
+
+public class Character : MonoBehaviour
+{
+    public string Name;
+
+    public Character(string name)
+    {
+        Name = name;
+    }
+}
