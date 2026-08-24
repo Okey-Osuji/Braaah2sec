@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float moveSpeed = 1f;       // Player movement speed
+    public float moveSpeed = 5f;       // Player movement speed
     public float gravity = -9.81f;     // Gravity force applied to player
     public float jumpHeight = 1.5f;    // Jump height in units
 
@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 lookInput;              // Stores mouse/analog look input
     private Vector3 velocity;               // Vertical velocity (gravity/jump)
     private float verticalRotation = 0f;    // Tracks up/down camera rotation
+    private bool isZoomed;                  // Whether right-click zoom is currently enabled
 
     private void Awake()
     {
@@ -33,9 +34,9 @@ public class PlayerController : MonoBehaviour
         // Get the Camera component from the assigned cameraTransform
         playerCamera = cameraTransform.GetComponent<Camera>();
 
-        // Lock and hide the cursor for FPS control
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // Keep the cursor visible and free so the player can click keypad cubes.
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     private void Update()
@@ -45,6 +46,9 @@ public class PlayerController : MonoBehaviour
 
         // Handle player looking (camera rotation)
         HandleLook();
+
+        // Smoothly move toward the active zoom level.
+        HandleZoom();
     }
 
     // Called when movement input (WASD/analog stick) is detected
@@ -109,21 +113,37 @@ public class PlayerController : MonoBehaviour
     // Handles a generic "press" action (e.g., interact, use, or custom input)
     public void OnPress(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (!context.performed || playerCamera == null || Mouse.current == null)
         {
-            Debug.Log("Press action performed!");
+            return;
+        }
+
+        // Cast a ray from the mouse cursor into the scene to find a clicked keypad cube.
+        Ray mouseRay = playerCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+        if (Physics.Raycast(mouseRay, out RaycastHit hit))
+        {
+            PasswordKey passwordKey = hit.collider.GetComponent<PasswordKey>();
+            if (passwordKey != null)
+            {
+                passwordKey.Press();
+            }
         }
     }
-    // Handles zooming the camera in/out when input is performed
+    // Toggles zoom when the zoom action (right-click) is pressed.
     public void OnZoom(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
-            playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, zoomFOV, Time.deltaTime * zoomSpeed);
+            isZoomed = !isZoomed;
         }
-        else if (context.canceled)
-        {
-            playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, normalFOV, Time.deltaTime * zoomSpeed);
-        }
+    }
+
+    // Smoothly zooms toward either the normal or zoomed field of view.
+    private void HandleZoom()
+    {
+        if (playerCamera == null) return;
+
+        float targetFOV = isZoomed ? zoomFOV : normalFOV;
+        playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, targetFOV, Time.deltaTime * zoomSpeed);
     }
 }
