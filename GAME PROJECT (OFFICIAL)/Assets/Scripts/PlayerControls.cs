@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public float verticalLookLimit = 90f; // Limit for looking up/down
 
     [Header("Zoom Settings")]
-    public float zoomFOV = 40f;        // Field of view when zoomed in
+    public float zoomFOV = 10f;        // Field of view when zoomed in
     public float normalFOV = 60f;      // Default field of view
     public float zoomSpeed = 10f;      // Speed of zoom transition
     private Camera playerCamera;       // Reference to the Camera component
