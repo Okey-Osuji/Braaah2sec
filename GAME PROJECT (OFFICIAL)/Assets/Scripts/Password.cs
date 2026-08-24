@@ -19,12 +19,14 @@ public class Password : MonoBehaviour
 
     private string enteredPasscode = string.Empty;            // Digits entered during the current attempt
     private EndScreen endScreen;                              // Screen shown after the correct passcode is entered
+    private HintPopup hintPopup;                              // Timed clue shown if the puzzle takes too long
     private bool puzzleCompleted;                             // Stops extra keypad input after success
 
     private void Awake()
     {
         // Find the end-screen controller attached to the password manager.
         endScreen = GetComponent<EndScreen>();
+        hintPopup = GetComponent<HintPopup>();
         if (endScreen == null)
         {
             Debug.LogWarning("Password: Add an EndScreen component to this object and assign its UI panel.", this);
@@ -73,6 +75,7 @@ public class Password : MonoBehaviour
         {
             Debug.Log("Passcode accepted.");
             puzzleCompleted = true;
+            hintPopup?.StopTimer();
             if (endScreen != null)
             {
                 endScreen.Show();
