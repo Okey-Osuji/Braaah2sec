@@ -3708,7 +3708,7 @@ Transform:
   m_GameObject: {fileID: 405375161}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.08, y: 0.81, z: 5.24}
+  m_LocalPosition: {x: 22.27, y: 4.69, z: -0.24}
   m_LocalScale: {x: 0.3967437, y: 0.4694264, z: 0.56833076}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12306,6 +12306,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sofa
       objectReference: {fileID: 0}
+    - target: {fileID: -6093592463355912122, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d3d2038d532d54a41a623d551b83a2fa, type: 2}
     - target: {fileID: -6056355905726079284, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -12354,6 +12358,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 9.64
       objectReference: {fileID: 0}
+    - target: {fileID: -1806680513116206669, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d3d2038d532d54a41a623d551b83a2fa, type: 2}
     - target: {fileID: -1782201436207632077, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -12370,6 +12378,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.563
       objectReference: {fileID: 0}
+    - target: {fileID: -678588488315902003, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d3d2038d532d54a41a623d551b83a2fa, type: 2}
     - target: {fileID: -677414091594068373, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.82
