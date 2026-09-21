@@ -2,6 +2,8 @@ using UnityEngine;
 public class PickUpObject : MonoBehaviour
 {
     private Rigidbody rb;
+    public bool IsHeld { get; private set; } // Lets goals ignore an object while the player is holding it.
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -18,6 +20,7 @@ public class PickUpObject : MonoBehaviour
         transform.SetParent(holdPoint);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
+        IsHeld = true;
     }
     public void Drop()
     {
@@ -25,6 +28,7 @@ public class PickUpObject : MonoBehaviour
         transform.SetParent(null);
         rb.isKinematic = false;
         rb.useGravity = true;
+        IsHeld = false;
     }
     public void MoveToHoldPoint(Vector3 targetPosition)
     {
@@ -33,9 +37,11 @@ public class PickUpObject : MonoBehaviour
     public void Throw(Vector3 impulse)
     {
         transform.SetParent(null);
+        rb.isKinematic = false;
         rb.useGravity = true;
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
+        IsHeld = false;
         rb.AddForce(impulse, ForceMode.Impulse);
     }
 }
