@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Cat : MonoBehaviour
 {
-    private string name;
+    private string namer;
     private int age;
 
     public void Meow()
