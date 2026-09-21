@@ -12394,6 +12394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room Wall
       objectReference: {fileID: 0}
+    - target: {fileID: -466118557685467119, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 38d799d4a3814034cb8add01e489c0e5, type: 2}
     - target: {fileID: 919132149155446097, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
       propertyPath: m_Name
       value: game background
@@ -12426,6 +12430,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.662
       objectReference: {fileID: 0}
+    - target: {fileID: 3723065607122509958, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 38d799d4a3814034cb8add01e489c0e5, type: 2}
     - target: {fileID: 4306643203051859313, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.7003515
@@ -12433,6 +12441,10 @@ PrefabInstance:
     - target: {fileID: 4865064391339405807, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.679
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233112405309087440, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
+      propertyPath: m_Name
+      value: Rug
       objectReference: {fileID: 0}
     - target: {fileID: 8135463544173796931, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12442,6 +12454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cupboard
       objectReference: {fileID: 0}
+    - target: {fileID: 8442510506162454399, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 673d535c391c40046982b867f866336a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
