@@ -19,12 +19,17 @@ public class PlayerController : MonoBehaviour
     public float zoomSpeed = 10f;      // Speed of zoom transition
     private Camera playerCamera;       // Reference to the Camera component
 
+    [Header("Pickup Settings")]
+    public float pickupRange = 3f;     // Maximum distance at which objects can be picked up
+    public Transform holdPoint;        // Position where a held object is attached
+
     private CharacterController controller; // Handles collisions & movement
     private Vector2 moveInput;              // Stores WASD/analog stick input
     private Vector2 lookInput;              // Stores mouse/analog look input
     private Vector3 velocity;               // Vertical velocity (gravity/jump)
     private float verticalRotation = 0f;    // Tracks up/down camera rotation
     private bool isZoomed;                  // Whether right-click zoom is currently enabled
+    private PickUpObject heldObject;        // Object currently held by the player, if any
 
     private void Awake()
     {
@@ -129,6 +134,43 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    // Picks up the object in front of the camera, or drops the object currently being held.
+    public void OnPickUp(InputAction.CallbackContext context)
+    {
+        // Only respond once when the assigned PickUp control is pressed.
+        if (!context.performed)
+        {
+            return;
+        }
+
+        // A second press drops the currently held object.
+        if (heldObject != null)
+        {
+            heldObject.Drop();
+            heldObject = null;
+            return;
+        }
+
+        // Do not try to pick up objects until the camera and holding position are assigned.
+        if (cameraTransform == null || holdPoint == null)
+        {
+            return;
+        }
+
+        // Raycast straight ahead to find a PickUpObject within the configured range.
+        Ray pickupRay = new Ray(cameraTransform.position, cameraTransform.forward);
+        if (Physics.Raycast(pickupRay, out RaycastHit hit, pickupRange))
+        {
+            PickUpObject pickupObject = hit.collider.GetComponent<PickUpObject>();
+            if (pickupObject != null)
+            {
+                pickupObject.PickUp(holdPoint);
+                heldObject = pickupObject;
+            }
+        }
+    }
+
     // Toggles zoom when the zoom action (right-click) is pressed.
     public void OnZoom(InputAction.CallbackContext context)
     {
