@@ -12330,6 +12330,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: c5b559c95c4bdfa4896be93ed28b9818, type: 2}
+    - target: {fileID: -4683669308469848369, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ae54b0f72a350c64f811c727f11ea12d, type: 2}
+    - target: {fileID: -4112419152623993645, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ae54b0f72a350c64f811c727f11ea12d, type: 2}
     - target: {fileID: -3542852092398272455, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.685
@@ -12388,7 +12396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -677414091594068373, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.05
+      value: 1.83
       objectReference: {fileID: 0}
     - target: {fileID: -516098083770646512, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
       propertyPath: m_Name
@@ -12402,6 +12410,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: game background
       objectReference: {fileID: 0}
+    - target: {fileID: 1215371896449706283, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ae54b0f72a350c64f811c727f11ea12d, type: 2}
     - target: {fileID: 2248808924673776129, guid: 5da7832c44508424b97b2a6bb3b477bb, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.7926126
