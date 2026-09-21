@@ -444,8 +444,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.46147156, y: 1.0740247, z: 0.34301376}
-  m_Center: {x: 0.009599686, y: -0.049118042, z: -0.00664711}
+  m_Size: {x: 0.50359344, y: 1.3437428, z: 0.5104904}
+  m_Center: {x: 0.013486862, y: -0.05862689, z: 0.011076927}
 --- !u!114 &82695917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,7 +484,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &111838936
 GameObject:
   m_ObjectHideFlags: 0
@@ -4234,7 +4234,6 @@ GameObject:
   - component: {fileID: 405375167}
   - component: {fileID: 405375166}
   - component: {fileID: 405375168}
-  - component: {fileID: 405375169}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4489,33 +4488,6 @@ MonoBehaviour:
   zoomSpeed: 10
   pickupRange: 3
   holdPoint: {fileID: 425549453}
---- !u!54 &405375169
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405375161}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!43 &410588760
 Mesh:
   m_ObjectHideFlags: 0
