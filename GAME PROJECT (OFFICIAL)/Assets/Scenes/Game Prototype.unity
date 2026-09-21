@@ -4421,7 +4421,19 @@ MonoBehaviour:
     m_ActionId: 974cce1d-c321-44b8-bbb7-4198a499cd24
     m_ActionName: 'Player/Zoom[/Mouse/rightButton]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 405375168}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnPickUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 83581b8a-966c-490c-aa88-bef9e32673dd
     m_ActionName: 'Player/PickUp[/Keyboard/p]'
   m_NeverAutoSwitchControlSchemes: 0
