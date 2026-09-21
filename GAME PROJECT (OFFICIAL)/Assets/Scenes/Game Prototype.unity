@@ -458,6 +458,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05d7ac534b4f8ad4a8c78ec9e1423aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUpObject
+  player: {fileID: 405375165}
+  highlightRange: 3
+  highlightColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!54 &82695918
 Rigidbody:
   m_ObjectHideFlags: 0
