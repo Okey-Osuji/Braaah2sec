@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game Prototype.unity
     guid: 77ed1a6a62fadcb428546845f2265299
+  - enabled: 1
+    path: Assets/Scenes/Main Menu Version 1( Stanley Parable Version).unity
+    guid: ceab4629487cc0a48bab39d047e99fca
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
