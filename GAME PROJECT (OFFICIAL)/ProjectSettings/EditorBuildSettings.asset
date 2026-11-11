@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main Menu Version 1( Stanley Parable Version).unity
     guid: ceab4629487cc0a48bab39d047e99fca
   - enabled: 1
