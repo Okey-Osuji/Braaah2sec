@@ -2,68 +2,60 @@ using UnityEngine;
 
 public class PickUpObject : MonoBehaviour
 {
-    [Header("Proximity Highlight")]
+    [Header("Proximity Particle Effect")]
     [SerializeField] private Transform player;
-    [SerializeField] private float highlightRange = 3f;
-    [SerializeField] private Color highlightColor = Color.green;
+    [SerializeField] private float particleRange = 3f;
+    [SerializeField] private ParticleSystem auraParticles;
 
     private Rigidbody rb;
-    private Renderer[] renderers;
-    private Color[] originalColors;
 
-    public bool IsHeld { get; private set; } // Lets goals ignore an object while the player is holding it.
+    public bool IsHeld { get; private set; } // Lets goals ignore an object while the player is holding it
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
 
-        // Include renderer components on child objects, if the item uses a nested model.
-        renderers = GetComponentsInChildren<Renderer>();
-        originalColors = new Color[renderers.Length];
-
-        for (int i = 0; i < renderers.Length; i++)
+        // Finds a Particle System attached to this item or one of its children
+        if (auraParticles == null)
         {
-            Material material = renderers[i].material;
-            originalColors[i] = material.HasProperty("_BaseColor")
-                ? material.GetColor("_BaseColor") // URP Lit material.
-                : material.color;                  // Built-in Standard material.
+            auraParticles = GetComponentInChildren<ParticleSystem>();
+        }
+
+        if (auraParticles != null)
+        {
+            auraParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         }
     }
 
+    // Update method to track whenever player comes near mesh, which truggers particle effects on or off
     private void Update()
     {
-        if (player == null)
+        if (player == null || auraParticles == null)
         {
             return;
         }
 
-        bool playerIsNear = !IsHeld && Vector3.Distance(transform.position, player.position) <= highlightRange;
+        bool playerIsNear = !IsHeld && Vector3.Distance(transform.position, player.position) <= particleRange;
 
-        for (int i = 0; i < renderers.Length; i++)
+        if (playerIsNear && !auraParticles.isPlaying)
         {
-            Material material = renderers[i].material;
-            Color targetColor = playerIsNear ? highlightColor : originalColors[i];
-
-            if (material.HasProperty("_BaseColor"))
-            {
-                material.SetColor("_BaseColor", targetColor);
-            }
-            else
-            {
-                material.color = targetColor;
-            }
+            auraParticles.Play(true);
+        }
+        else if (!playerIsNear && auraParticles.isPlaying)
+        {
+            auraParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         }
     }
 
     public void PickUp(Transform holdPoint)
     {
-        // Disable physics while the object is controlled by the hold point.
+        // Disable physics while the object is controlled by the hold point
         rb.useGravity = false;
         rb.isKinematic = true;
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
 
-        // Attach the object and align it exactly with the hold point.
+        // Attaches the object and aligns it exactly with the hold point
         transform.SetParent(holdPoint);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
@@ -72,7 +64,7 @@ public class PickUpObject : MonoBehaviour
 
     public void Drop()
     {
-        // Detach first, then return control of the object to the physics system.
+        // Detaches first, then return control of the object to the physics system
         transform.SetParent(null);
         rb.isKinematic = false;
         rb.useGravity = true;
@@ -94,4 +86,5 @@ public class PickUpObject : MonoBehaviour
         IsHeld = false;
         rb.AddForce(impulse, ForceMode.Impulse);
     }
+
 }
