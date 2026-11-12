@@ -8,6 +8,10 @@ public class PlayerController : MonoBehaviour
     public float gravity = -9.81f;     // Gravity force applied to player
     public float jumpHeight = 1.5f;    // Jump height in units
 
+    [Header("Animation Settings")]
+    [SerializeField] private Animator playerAnimator;
+    [SerializeField] private string animatorSpeedParameter = "Speed";
+
     [Header("Look Settings")]
     public Transform cameraTransform;  // Reference to the player's camera
     public float lookSensitivity = 0.5f; // Mouse sensitivity for looking
@@ -30,6 +34,8 @@ public class PlayerController : MonoBehaviour
     private float verticalRotation = 0f;    // Tracks up/down camera rotation
     private bool isZoomed;                  // Whether right-click zoom is currently enabled
     private PickUpObject heldObject;        // Object currently held by the player, if any
+    private int animatorSpeedParameterHash;
+    private bool hasAnimatorSpeedParameter;
 
     private void Awake()
     {
@@ -37,7 +43,17 @@ public class PlayerController : MonoBehaviour
         controller = GetComponent<CharacterController>();
 
         // Get the Camera component from the assigned cameraTransform
-        playerCamera = cameraTransform.GetComponent<Camera>();
+        if (cameraTransform != null)
+        {
+            playerCamera = cameraTransform.GetComponent<Camera>();
+        }
+
+        if (playerAnimator == null)
+        {
+            playerAnimator = GetComponentInChildren<Animator>();
+        }
+
+        CacheAnimatorSpeedParameter();
 
         // Keep the cursor visible and free so the player can click keypad cubes.
         Cursor.lockState = CursorLockMode.None;
@@ -46,6 +62,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        UpdateMovementAnimation();
+
         // Handle player movement (walking, gravity, jumping)
         HandleMovement();
 
@@ -54,6 +72,41 @@ public class PlayerController : MonoBehaviour
 
         // Smoothly move toward the active zoom level.
         HandleZoom();
+    }
+
+    private void CacheAnimatorSpeedParameter()
+    {
+        if (playerAnimator == null)
+        {
+            Debug.LogWarning("PlayerController: No Animator found on this object or its children. Assign the character rig Animator.", this);
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(animatorSpeedParameter))
+        {
+            Debug.LogWarning("PlayerController: Set the Animator speed parameter name (expected 'Speed').", this);
+            return;
+        }
+
+        animatorSpeedParameterHash = Animator.StringToHash(animatorSpeedParameter);
+        foreach (AnimatorControllerParameter parameter in playerAnimator.parameters)
+        {
+            if (parameter.name == animatorSpeedParameter && parameter.type == AnimatorControllerParameterType.Float)
+            {
+                hasAnimatorSpeedParameter = true;
+                return;
+            }
+        }
+
+        Debug.LogWarning($"PlayerController: Animator has no Float parameter named '{animatorSpeedParameter}'.", this);
+    }
+
+    private void UpdateMovementAnimation()
+    {
+        if (playerAnimator != null && hasAnimatorSpeedParameter)
+        {
+            playerAnimator.SetFloat(animatorSpeedParameterHash, Mathf.Clamp01(moveInput.magnitude));
+        }
     }
 
     // Called when movement input (WASD/analog stick) is detected
