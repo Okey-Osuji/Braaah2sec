@@ -66,8 +66,19 @@ public class PickUpObject : MonoBehaviour
     {
         // Detaches first, then return control of the object to the physics system
         transform.SetParent(null);
+
+        // The held position can overlap a table, wall, or floor when the player
+        // looks down. Lift the item clear of its collider before physics resumes.
+        Collider itemCollider = GetComponent<Collider>();
+        if (itemCollider != null)
+        {
+            transform.position += Vector3.up * (itemCollider.bounds.extents.y + 0.05f);
+        }
+
         rb.isKinematic = false;
         rb.useGravity = true;
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
         IsHeld = false;
     }
 
