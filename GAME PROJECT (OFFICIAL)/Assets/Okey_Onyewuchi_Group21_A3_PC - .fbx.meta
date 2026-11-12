@@ -1,0 +1,582 @@
+fileFormatVersion: 2
+guid: 9d748f90b7a755343b4bb14a137b3e8c
+ModelImporter:
+  serializedVersion: 24300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base
+    second: {fileID: 2100000, guid: 5316cdb027ecbd947babcf1466e77283, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EyeColourBlack
+    second: {fileID: 2100000, guid: 614c491bcd2570a488fa4b0c006316c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EyeColourWhite
+    second: {fileID: 2100000, guid: 56cdf531d558d1843bc93ec293fe2c23, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Okey_Onyewuchi_Group21_A2_PC_Albedo
+    second: {fileID: 2800000, guid: 708d1b11f388af54798ac405b1e38dda, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Okey_Onyewuchi_Group21_A2_PC_Metallic
+    second: {fileID: 2800000, guid: fad234d8866c8f1449341f68278a5c97, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Okey_Onyewuchi_Group21_A2_PC_Normal
+    second: {fileID: 2800000, guid: 0fc874224a5302b4e9cc6418586ab0e3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Okey_Onyewuchi_Group21_A2_PC_Roughness
+    second: {fileID: 2800000, guid: f3e86705d6ee1654eb341dca15c9252b, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+    searchTexturesGlobally: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle_Animation
+      takeName: Idle_Animation
+      internalID: 3122479869172592013
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk_Animation
+      takeName: Walk_Animation
+      internalID: 4648951672268579092
+      firstFrame: 0
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Idle_Animation
+      takeName: Armature|Idle_Animation
+      internalID: -8148749267925462916
+      firstFrame: 0
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Walk_Animation
+      takeName: Armature|Walk_Animation
+      internalID: 3967430900862790068
+      firstFrame: 0
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.5
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Okey_Onyewuchi_Group21_A3_PC - (Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: Okey_Onyewuchi_Group21_A3_PC - (Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Root
+      parentName: Armature
+      position: {x: 0.00018347893, y: 0.00003825144, z: 0.00001550366}
+      rotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 0.9999998, z: 0.9999998}
+    - name: DEF_Spine1
+      parentName: Root
+      position: {x: -0, y: 0.004995352, z: 0}
+      rotation: {x: 0.10012105, y: 0.000000118610224, z: 0.000000011935363, w: 0.9949753}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DEF_Spine2
+      parentName: DEF_Spine1
+      position: {x: 4.816396e-12, y: 0.0013001685, z: -1.238933e-10}
+      rotation: {x: -0.09689402, y: 7.661781e-10, z: -0.000000023175922, w: 0.9952947}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: DEF_Spine3
+      parentName: DEF_Spine2
+      position: {x: 1.2681353e-11, y: 0.0015531265, z: -2.5388758e-12}
+      rotation: {x: -0.045638468, y: 0.00010992588, z: 0.0017054053, w: 0.99895656}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+    - name: DEF_Neck
+      parentName: DEF_Spine3
+      position: {x: 3.5197444e-12, y: 0.0020738854, z: 6.8838525e-11}
+      rotation: {x: 0.14854436, y: -0.000028205759, z: -0.001646275, w: 0.9889045}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1}
+    - name: DEF_Head
+      parentName: DEF_Neck
+      position: {x: -2.7648639e-12, y: 0.0007553694, z: 3.413333e-11}
+      rotation: {x: -0.13488023, y: -0.000000005096807, z: -0.00007020086, w: 0.9908619}
+      scale: {x: 1, y: 0.99999976, z: 0.99999994}
+    - name: Eye Balls- Low Poly
+      parentName: DEF_Head
+      position: {x: -0.00017095877, y: -0.010612765, z: -0.0008274578}
+      rotation: {x: -0.68654335, y: -0.0080982465, z: -0.008553706, w: 0.72699344}
+      scale: {x: 0.9999999, y: 1, z: 0.9999998}
+    - name: Eyes - Low Poly
+      parentName: DEF_Head
+      position: {x: -0.00017095877, y: -0.010612765, z: -0.0008274578}
+      rotation: {x: -0.68654335, y: -0.0080982465, z: -0.008553706, w: 0.72699344}
+      scale: {x: 0.9999999, y: 1, z: 0.9999998}
+    - name: FK/ IK Switch
+      parentName: DEF_Neck
+      position: {x: 0.00000029017656, y: 0.0033285914, z: -0.0005575311}
+      rotation: {x: -0.13488023, y: -0.0000000010368237, z: -0.00007020123, w: 0.9908619}
+      scale: {x: 1.0000002, y: 0.9999995, z: 0.9999999}
+    - name: DEF_Clav.L
+      parentName: DEF_Spine3
+      position: {x: -0.00014112894, y: 0.0015711988, z: -0.000012067454}
+      rotation: {x: 0.044053044, y: -0.019700678, z: 0.565895, w: 0.82306385}
+      scale: {x: 0.9999998, y: 0.99999994, z: 0.99999976}
+    - name: DEF_UpperArm.L
+      parentName: DEF_Clav.L
+      position: {x: -0.000029373285, y: 0.00078048644, z: -0.000016038488}
+      rotation: {x: -0.023033042, y: 0.07334654, z: 0.1885247, w: 0.97905475}
+      scale: {x: 1.0000001, y: 1.0000006, z: 0.9999999}
+    - name: DEF_LowerArm.L
+      parentName: DEF_UpperArm.L
+      position: {x: -3.4924594e-11, y: 0.0021394005, z: -2.7939677e-11}
+      rotation: {x: -0.027878614, y: -0.0028859884, z: 0.018236654, w: 0.9994408}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000004}
+    - name: DEF_Hand.L
+      parentName: DEF_LowerArm.L
+      position: {x: -1.7229468e-10, y: 0.0015559554, z: 7.4505804e-11}
+      rotation: {x: 0.026639635, y: -0.0039100875, z: 0.12147494, w: 0.99222934}
+      scale: {x: 1.0000007, y: 1.0000006, z: 1}
+    - name: IK_UpperArm.L
+      parentName: DEF_Clav.L
+      position: {x: -0.000029373434, y: 0.0007804867, z: -0.000016038492}
+      rotation: {x: -0.053493634, y: 0.055670783, z: 0.76387566, w: 0.6407286}
+      scale: {x: 0.9999996, y: 1.0000008, z: 1.0000002}
+    - name: IK_LowerArm.L
+      parentName: IK_UpperArm.L
+      position: {x: -2.43308e-10, y: 0.0021394005, z: 4.1909514e-11}
+      rotation: {x: -0.053995326, y: -0.0026732346, z: 0.04275693, w: 0.9976218}
+      scale: {x: 0.99999994, y: 0.9999996, z: 0.99999994}
+    - name: FK_UpperArm.L
+      parentName: DEF_Clav.L
+      position: {x: -0.000029373285, y: 0.00078048644, z: -0.000016038488}
+      rotation: {x: -0.053493645, y: 0.05567079, z: 0.76387566, w: 0.6407286}
+      scale: {x: 1.0000001, y: 1.0000006, z: 0.9999999}
+    - name: FK_LowerArm.L
+      parentName: FK_UpperArm.L
+      position: {x: -3.4924594e-11, y: 0.0021394005, z: -2.7939677e-11}
+      rotation: {x: -0.05399532, y: -0.0026732606, z: 0.04275693, w: 0.9976218}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000004}
+    - name: FK_Hand.L
+      parentName: FK_LowerArm.L
+      position: {x: -1.7229468e-10, y: 0.0015559554, z: 7.4505804e-11}
+      rotation: {x: 0.026639635, y: -0.0039100875, z: 0.12147494, w: 0.99222934}
+      scale: {x: 1.0000007, y: 1.0000006, z: 1}
+    - name: DEF_Clav.R
+      parentName: DEF_Spine3
+      position: {x: 0.00015186564, y: 0.0015701972, z: -0.000012048645}
+      rotation: {x: 0.044156462, y: 0.019497257, z: -0.56870174, w: 0.8211264}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: DEF_UpperArm.R
+      parentName: DEF_Clav.R
+      position: {x: 0.000029372652, y: 0.0007804863, z: -0.000016038484}
+      rotation: {x: 0.023032643, y: 0.073346816, z: 0.18852441, w: -0.9790548}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.9999998}
+    - name: DEF_LowerArm.R
+      parentName: DEF_UpperArm.R
+      position: {x: -1.1757947e-10, y: 0.0021394005, z: -4.6566126e-11}
+      rotation: {x: -0.027878754, y: 0.002886779, z: -0.018236635, w: 0.9994408}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.9999999}
+    - name: DEF_Hand.R
+      parentName: DEF_LowerArm.R
+      position: {x: -2.8172506e-10, y: 0.001555955, z: -1.16415315e-11}
+      rotation: {x: 0.026639631, y: 0.0039078174, z: -0.121476874, w: 0.99222904}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1}
+    - name: IK_UpperArm.R
+      parentName: DEF_Clav.R
+      position: {x: 0.0000293725, y: 0.000780486, z: -0.000016038488}
+      rotation: {x: 0.053493608, y: 0.05567077, z: 0.76387566, w: -0.64072865}
+      scale: {x: 1, y: 1.0000004, z: 0.9999998}
+    - name: IK_LowerArm.R
+      parentName: IK_UpperArm.R
+      position: {x: -7.654308e-11, y: 0.0021394014, z: -4.1909514e-11}
+      rotation: {x: -0.053995326, y: 0.0026731656, z: -0.04275681, w: 0.9976218}
+      scale: {x: 0.9999998, y: 0.9999997, z: 0.9999998}
+    - name: FK_UpperArm.R
+      parentName: DEF_Clav.R
+      position: {x: 0.000029372652, y: 0.0007804863, z: -0.000016038484}
+      rotation: {x: 0.053493608, y: 0.05567077, z: 0.76387566, w: -0.64072865}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.9999998}
+    - name: FK_LowerArm.R
+      parentName: FK_UpperArm.R
+      position: {x: -1.1757947e-10, y: 0.0021394005, z: -4.6566126e-11}
+      rotation: {x: -0.053995315, y: 0.0026732066, z: -0.04275687, w: 0.9976218}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: FK_Hand.R
+      parentName: FK_LowerArm.R
+      position: {x: -1.2776581e-10, y: 0.0015559548, z: -1.16415315e-11}
+      rotation: {x: 0.026639612, y: 0.003910114, z: -0.12147503, w: 0.9922293}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: DEF_UpperLeg.L
+      parentName: DEF_Spine1
+      position: {x: -0.0006123263, y: 0.000592414, z: -0.0000058885616}
+      rotation: {x: 0.0007397578, y: 0.07860336, z: 0.9942374, w: 0.07288985}
+      scale: {x: 0.99999946, y: 0.99999994, z: 0.99999917}
+    - name: DEF_LowerLeg.L
+      parentName: DEF_UpperLeg.L
+      position: {x: -4.5765773e-11, y: 0.0021501784, z: 2.6775523e-11}
+      rotation: {x: -0.012739521, y: 0.02993166, z: 0.050275628, w: 0.99820554}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: DEF_UpperLeg.R
+      parentName: DEF_Spine1
+      position: {x: 0.0006123264, y: 0.0005924128, z: -0.0000058879345}
+      rotation: {x: -0.0007518766, y: 0.07860252, z: 0.9942374, w: -0.07289028}
+      scale: {x: 1.0000026, y: 1.0000004, z: 1.0000026}
+    - name: DEF_LowerLeg.R
+      parentName: DEF_UpperLeg.R
+      position: {x: 4.3110047e-12, y: 0.0021501784, z: 1.6298145e-11}
+      rotation: {x: -0.012738326, y: -0.029932003, z: -0.050275758, w: 0.9982055}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: IK_UpperLeg.L
+      parentName: DEF_Spine1
+      position: {x: -0.0006123263, y: 0.00059241336, z: -0.000005888487}
+      rotation: {x: 0.0007397578, y: 0.07860336, z: 0.9942374, w: 0.07288985}
+      scale: {x: 0.9999983, y: 0.99999964, z: 0.99999785}
+    - name: IK_LowerLeg.L
+      parentName: IK_UpperLeg.L
+      position: {x: -4.7293724e-11, y: 0.002150179, z: -1.8626451e-11}
+      rotation: {x: -0.012739521, y: 0.029931657, z: 0.050275628, w: 0.99820554}
+      scale: {x: 1.0000002, y: 1.0000001, z: 0.9999999}
+    - name: FK_UpperLeg.L
+      parentName: DEF_Spine1
+      position: {x: -0.0006123263, y: 0.000592414, z: -0.0000058885616}
+      rotation: {x: 0.0007397578, y: 0.07860336, z: 0.9942374, w: 0.07288985}
+      scale: {x: 0.99999946, y: 0.99999994, z: 0.99999917}
+    - name: FK_LowerLeg.L
+      parentName: FK_UpperLeg.L
+      position: {x: -4.5765773e-11, y: 0.0021501784, z: 2.6775523e-11}
+      rotation: {x: -0.012739521, y: 0.02993166, z: 0.050275628, w: 0.99820554}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: FK_Foot.L
+      parentName: FK_LowerLeg.L
+      position: {x: -0.0000000021740558, y: 0.0028783723, z: -0.0000000011036172}
+      rotation: {x: 0.33789232, y: -0.6414156, z: -0.29544303, w: 0.62219626}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000004}
+    - name: FK_Toes.L
+      parentName: FK_Foot.L
+      position: {x: -8.090865e-11, y: 0.0005278458, z: -1.2805685e-11}
+      rotation: {x: 0.000058710568, y: 0.0037638242, z: -0.18290222, w: 0.9831239}
+      scale: {x: 0.9999998, y: 1.0000006, z: 1}
+    - name: FK_UpperLeg.R
+      parentName: DEF_Spine1
+      position: {x: 0.0006123264, y: 0.0005924128, z: -0.0000058879345}
+      rotation: {x: -0.0007518766, y: 0.07860252, z: 0.9942374, w: -0.07289028}
+      scale: {x: 1.0000026, y: 1.0000004, z: 1.0000026}
+    - name: FK_LowerLeg.R
+      parentName: FK_UpperLeg.R
+      position: {x: 4.3110047e-12, y: 0.0021501784, z: 1.6298145e-11}
+      rotation: {x: -0.012738326, y: -0.029932003, z: -0.050275758, w: 0.9982055}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: FK_Foot.R
+      parentName: FK_LowerLeg.R
+      position: {x: 0.0000000020710285, y: 0.0028783702, z: -0.0000000011199155}
+      rotation: {x: -0.3378827, y: -0.6414133, z: -0.29545158, w: -0.62219995}
+      scale: {x: 1.0000001, y: 1, z: 0.9999999}
+    - name: FK_Toes.R
+      parentName: FK_Foot.R
+      position: {x: 4.802132e-11, y: 0.0005278449, z: -6.304617e-11}
+      rotation: {x: -0.00005637108, y: 0.0037648967, z: -0.1829027, w: -0.98312384}
+      scale: {x: 1.0000013, y: 0.99999976, z: 1.0000006}
+    - name: IK_UpperLeg.R
+      parentName: DEF_Spine1
+      position: {x: 0.0006123264, y: 0.000592414, z: -0.0000058883247}
+      rotation: {x: -0.0007416265, y: 0.07860334, z: 0.9942374, w: -0.072889894}
+      scale: {x: 0.9999994, y: 0.9999998, z: 0.9999999}
+    - name: IK_LowerLeg.R
+      parentName: IK_UpperLeg.R
+      position: {x: 2.715387e-10, y: 0.0021501773, z: -2.3283064e-12}
+      rotation: {x: -0.012739447, y: -0.029931674, z: -0.050275683, w: 0.99820554}
+      scale: {x: 1.0000002, y: 1.0000004, z: 0.99999994}
+    - name: IK_Control_Leg.L
+      parentName: Root
+      position: {x: -0.0010511625, y: 0.00058205036, z: -0.00016524072}
+      rotation: {x: -0.032024495, y: -0.7063813, z: 0.7063812, w: 0.032024495}
+      scale: {x: 0.9999999, y: 0.99999994, z: 1}
+    - name: IK_Foot.L
+      parentName: IK_Control_Leg.L
+      position: {x: -8.6613e-10, y: -5.2154064e-10, z: 0.000000001322478}
+      rotation: {x: 0.6917386, y: -0.25575528, z: -0.63396746, w: 0.23274942}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.99999964}
+    - name: IK_Toes.L
+      parentName: IK_Foot.L
+      position: {x: -5.1804817e-11, y: 0.00052784564, z: 3.5579432e-11}
+      rotation: {x: 0.000058300786, y: 0.0037640864, z: -0.18290246, w: 0.98312384}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: IK_Control_Leg.R
+      parentName: Root
+      position: {x: 0.0010511625, y: 0.00058205036, z: -0.00016524072}
+      rotation: {x: 0.032024495, y: -0.7063813, z: 0.7063812, w: -0.032024495}
+      scale: {x: 0.9999999, y: 0.99999994, z: 1}
+    - name: IK_Foot.R
+      parentName: IK_Control_Leg.R
+      position: {x: 4.33065e-10, y: 0, z: -1.3969838e-10}
+      rotation: {x: -0.6917386, y: -0.25575528, z: -0.63396746, w: -0.23274942}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.99999964}
+    - name: IK_Toes.R
+      parentName: IK_Foot.R
+      position: {x: 4.947651e-11, y: 0.0005278455, z: 3.274181e-11}
+      rotation: {x: -0.000058300786, y: 0.0037640864, z: -0.18290246, w: -0.98312384}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: DEF_Foot.L
+      parentName: Armature
+      position: {x: -0.00086768134, y: 0.00020349308, z: 0.00059755443}
+      rotation: {x: 0.6646455, y: -0.24409372, z: 0.6623167, w: -0.24495156}
+      scale: {x: 1, y: 1.0000001, z: 0.9999997}
+    - name: DEF_Toes.L
+      parentName: DEF_Foot.L
+      position: {x: -8.090865e-11, y: 0.0005278458, z: -1.2805685e-11}
+      rotation: {x: 0.0000583902, y: 0.003764134, z: -0.1829023, w: 0.98312396}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000002}
+    - name: DEF_Foot.R
+      parentName: Armature
+      position: {x: 0.0012346392, y: 0.00020349308, z: 0.00059755385}
+      rotation: {x: 0.6646455, y: 0.24409372, z: -0.6623167, w: -0.24495156}
+      scale: {x: 1.0000015, y: 1.0000021, z: 1.0000026}
+    - name: DEF_Toes.R
+      parentName: DEF_Foot.R
+      position: {x: 4.802132e-11, y: 0.0005278449, z: -6.304617e-11}
+      rotation: {x: -0.0000583902, y: 0.003764134, z: -0.1829023, w: -0.98312396}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000005}
+    - name: IK_Control_Arm.L
+      parentName: Armature
+      position: {x: -0.001720219, y: 0.000026953223, z: 0.006226728}
+      rotation: {x: 0.48346603, y: -0.48346606, z: 0.51600444, w: 0.51600444}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: IK_Hand.L
+      parentName: IK_Control_Arm.L
+      position: {x: -0.0000000010657822, y: -2.9802322e-10, z: -2.3283063e-11}
+      rotation: {x: -0.07066786, y: 0.02475638, z: 0.70356643, w: 0.7066735}
+      scale: {x: 1.0000006, y: 1.0000006, z: 0.9999998}
+    - name: IK_ArmPole.L
+      parentName: Armature
+      position: {x: -0.0013601569, y: 0.0017925528, z: 0.0077345553}
+      rotation: {x: -0.000000007450581, y: -0.97273123, z: -0.000000029802322, w: 0.23193523}
+      scale: {x: 1, y: 1, z: 0.9999998}
+    - name: IK_Control_Arm.R
+      parentName: Armature
+      position: {x: 0.0020871768, y: 0.000026953223, z: 0.006226728}
+      rotation: {x: 0.48346603, y: 0.48346606, z: -0.51600444, w: 0.51600444}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: IK_Hand.R
+      parentName: IK_Control_Arm.R
+      position: {x: 4.663889e-10, y: -0.0000000011920929, z: -3.7252902e-11}
+      rotation: {x: 0.07066786, y: 0.02475638, z: 0.70356643, w: -0.7066735}
+      scale: {x: 1.0000006, y: 1.0000006, z: 0.9999998}
+    - name: IK_ArmPole.R
+      parentName: Armature
+      position: {x: 0.0017271148, y: 0.0017925528, z: 0.0077345553}
+      rotation: {x: 0.000000007450581, y: -0.97273123, z: -0.000000029802322, w: -0.23193523}
+      scale: {x: 1, y: 1, z: 0.9999998}
+    - name: IK_KneePole.L
+      parentName: Armature
+      position: {x: -0.0007402429, y: -0.0021262865, z: 0.003466917}
+      rotation: {x: 0.0822044, y: -0, z: 0.9966155, w: -0.0000000037252903}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1}
+    - name: IK_KneePole.R
+      parentName: Armature
+      position: {x: 0.0011072009, y: -0.0021262865, z: 0.003466917}
+      rotation: {x: -0.0822044, y: -0, z: 0.9966155, w: 0.0000000037252903}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1}
+    - name: Low-Poly Player Character
+      parentName: Okey_Onyewuchi_Group21_A3_PC - (Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.5
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
