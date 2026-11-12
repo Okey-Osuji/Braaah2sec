@@ -424,6 +424,7 @@ GameObject:
   - component: {fileID: 3039762739204959661}
   - component: {fileID: 7282422417349001650}
   - component: {fileID: 1968925522567854934}
+  - component: {fileID: 3337102675462874537}
   m_Layer: 0
   m_Name: cubicle
   m_TagString: Untagged
@@ -544,6 +545,27 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5734630803154550785, guid: 49ef4076459e96d4386ce5e6cc598454, type: 3}
+--- !u!65 &3337102675462874537
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6540321977183399406}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.45, y: 1.3, z: 2.45}
+  m_Center: {x: 0.87, y: 1.08, z: -0.05}
 --- !u!1 &6633635797854218045
 GameObject:
   m_ObjectHideFlags: 0
