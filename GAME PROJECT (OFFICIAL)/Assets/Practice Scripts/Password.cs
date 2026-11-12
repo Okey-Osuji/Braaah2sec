@@ -3,8 +3,8 @@ using UnityEngine.Events;
 
 public class Password : MonoBehaviour
 {
-    // The fixed seven-digit passcode the player must enter in order.
-    private const string CorrectPasscode = "7452619";
+    // The fixed five-digit passcode the player must enter in order.
+    private const string CorrectPasscode = "25841";
 
     // Sound settings assigned in the Unity Inspector.
     [Header("Audio")]
@@ -14,7 +14,7 @@ public class Password : MonoBehaviour
 
     // Events that can be connected to other actions in the Unity Inspector.
     [Header("Events")]
-    [SerializeField] private UnityEvent onPasscodeAccepted;  // Called after correctly entering 7452619
+    [SerializeField] private UnityEvent onPasscodeAccepted;  // Called after correctly entering 2884
     [SerializeField] private UnityEvent onPasscodeRejected;  // Called as soon as an incorrect digit is entered
 
     private string enteredPasscode = string.Empty;            // Digits entered during the current attempt
