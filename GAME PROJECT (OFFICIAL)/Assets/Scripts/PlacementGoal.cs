@@ -13,8 +13,10 @@ public class PlacementGoal : MonoBehaviour
     [SerializeField] private float maximumSpeed = 0.15f;    // Item must be nearly still to count as placed.
 
     [Header("Completion")]
-    [SerializeField] private Animator doorAnimator;
-    [SerializeField] private string openTriggerName = "Open";
+    [SerializeField] private Animator leftDoorAnimator;
+    [SerializeField] private string leftDoorOpenTriggerName = "OpenDoor";
+    [SerializeField] private Animator rightDoorAnimator;
+    [SerializeField] private string rightDoorOpenTriggerName = "OpenDoor";
 
     private bool completed; // Prevents the door animation from being triggered more than once.
 
@@ -65,13 +67,27 @@ public class PlacementGoal : MonoBehaviour
     {
         completed = true;
 
-        if (doorAnimator != null && !string.IsNullOrWhiteSpace(openTriggerName))
+        TriggerDoor(leftDoorAnimator, leftDoorOpenTriggerName, "left");
+        TriggerDoor(rightDoorAnimator, rightDoorOpenTriggerName, "right");
+    }
+
+    private void TriggerDoor(Animator doorAnimator, string triggerName, string doorLabel)
+    {
+        if (doorAnimator == null || string.IsNullOrWhiteSpace(triggerName))
         {
-            doorAnimator.SetTrigger(openTriggerName);
+            Debug.LogWarning($"PlacementGoal: Assign the {doorLabel} door Animator and its open trigger name in the Inspector.", this);
+            return;
         }
-        else
+
+        foreach (AnimatorControllerParameter parameter in doorAnimator.parameters)
         {
-            Debug.LogWarning("PlacementGoal: Assign the door Animator and its open trigger name in the Inspector.", this);
+            if (parameter.name == triggerName && parameter.type == AnimatorControllerParameterType.Trigger)
+            {
+                doorAnimator.SetTrigger(triggerName);
+                return;
+            }
         }
+
+        Debug.LogWarning($"PlacementGoal: The {doorLabel} door Animator has no Trigger parameter named '{triggerName}'. Check its Animator Controller.", this);
     }
 }
