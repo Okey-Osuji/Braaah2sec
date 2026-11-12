@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.035
   m_LinearFogStart: -15.6
   m_LinearFogEnd: 390.01
-  m_AmbientSkyColor: {r: 0.88762236, g: 1.1069174, b: 0.88762236, a: 1}
+  m_AmbientSkyColor: {r: 0.22190559, g: 0.27672935, b: 0.22190559, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -1255,7 +1255,7 @@ Transform:
   m_GameObject: {fileID: 69086726}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.38, y: 0.98, z: -0.03}
+  m_LocalPosition: {x: -0.38, y: 1.71, z: -0.03}
   m_LocalScale: {x: 9.347843, y: 9.347843, z: 9.347843}
   m_ConstrainProportionsScale: 0
   m_Children:
