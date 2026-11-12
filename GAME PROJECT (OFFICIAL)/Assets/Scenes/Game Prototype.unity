@@ -12384,9 +12384,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -5388867356167283329, guid: 477d55842eabaf74182acb379fbb949c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1425326183}
-    - targetCorrespondingSourceObject: {fileID: -5388867356167283329, guid: 477d55842eabaf74182acb379fbb949c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1425326187}
   m_SourcePrefab: {fileID: 100100000, guid: 477d55842eabaf74182acb379fbb949c, type: 3}
 --- !u!1 &539926081
 GameObject:
@@ -50388,27 +50385,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1425326187
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425326178}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.010272, y: 2.04, z: 6.4696383}
-  m_Center: {x: 0, y: 0.98373246, z: -2.1948192}
 --- !u!43 &1433327939
 Mesh:
   m_ObjectHideFlags: 0
