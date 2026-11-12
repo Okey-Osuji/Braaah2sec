@@ -13,9 +13,10 @@ public class PlacementGoal : MonoBehaviour
     [SerializeField] private float maximumSpeed = 0.15f;    // Item must be nearly still to count as placed.
 
     [Header("Completion")]
-    [SerializeField] private EndScreen endScreen; // Existing end-screen controller to show on success.
+    [SerializeField] private Animator doorAnimator;
+    [SerializeField] private string openTriggerName = "Open";
 
-    private bool completed; // Prevents the end screen from being shown more than once.
+    private bool completed; // Prevents the door animation from being triggered more than once.
 
     private void Reset()
     {
@@ -64,13 +65,13 @@ public class PlacementGoal : MonoBehaviour
     {
         completed = true;
 
-        if (endScreen != null)
+        if (doorAnimator != null && !string.IsNullOrWhiteSpace(openTriggerName))
         {
-            endScreen.Show();
+            doorAnimator.SetTrigger(openTriggerName);
         }
         else
         {
-            Debug.LogWarning("PlacementGoal: Assign an EndScreen component in the Inspector.", this);
+            Debug.LogWarning("PlacementGoal: Assign the door Animator and its open trigger name in the Inspector.", this);
         }
     }
 }
