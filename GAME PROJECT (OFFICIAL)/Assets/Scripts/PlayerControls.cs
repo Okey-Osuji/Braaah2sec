@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour
     private PickUpObject heldObject;        // Object currently held by the player, if any
     private int animatorSpeedParameterHash;
     private bool hasAnimatorSpeedParameter;
+   
+
 
     private void Awake()
     {
@@ -52,7 +54,7 @@ public class PlayerController : MonoBehaviour
         {
             playerAnimator = GetComponentInChildren<Animator>();
         }
-
+       
         CacheAnimatorSpeedParameter();
 
         // Keep the cursor visible and free so the player can click keypad cubes.
@@ -106,6 +108,7 @@ public class PlayerController : MonoBehaviour
         if (playerAnimator != null && hasAnimatorSpeedParameter)
         {
             playerAnimator.SetFloat(animatorSpeedParameterHash, Mathf.Clamp01(moveInput.magnitude));
+            
         }
     }
 
@@ -132,6 +135,7 @@ public class PlayerController : MonoBehaviour
 
         // Apply horizontal movement
         controller.Move(move * moveSpeed * Time.deltaTime);
+        
 
         // Reset downward velocity when grounded
         if (controller.isGrounded && velocity.y < 0)
