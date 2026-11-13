@@ -28,7 +28,7 @@ public class PlacementGoal : MonoBehaviour
 
     private void Awake()
     {
-        // Keep the setup safe if this component is added to an existing object.
+        // Keeps the setup safe if this component is added to an existing object.
         GetComponent<BoxCollider>().isTrigger = true;
     }
 
