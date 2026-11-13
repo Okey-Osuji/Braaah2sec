@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour
     private PickUpObject heldObject;        // Object currently held by the player, if any
     private int animatorSpeedParameterHash;
     private bool hasAnimatorSpeedParameter;
+  
+    
    
 
 
@@ -43,6 +45,7 @@ public class PlayerController : MonoBehaviour
     {
         // Get the CharacterController attached to the player
         controller = GetComponent<CharacterController>();
+        
 
         // Get the Camera component from the assigned cameraTransform
         if (cameraTransform != null)
@@ -111,6 +114,7 @@ public class PlayerController : MonoBehaviour
             
         }
     }
+ 
 
     // Called when movement input (WASD/analog stick) is detected
     public void OnMove(InputAction.CallbackContext context)
