@@ -7,53 +7,53 @@ public class ComputerDesktopManager : MonoBehaviour
 {
     public GameObject[] computerDesktops;
 
-    private PlayerController playerController;
+    private bool isClosing = false;
 
     private void Start()
     {
         int selectedComputer =
             PlayerPrefs.GetInt("SelectedComputer", 1);
 
-        OpenComputer(selectedComputer);
-
-        playerController = FindObjectOfType<PlayerController>();
-
-        if (playerController != null)
+        foreach (GameObject desktop in computerDesktops)
         {
-            playerController.enabled = false;
+            if (desktop != null)
+            {
+                desktop.SetActive(false);
+            }
         }
 
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        int index = selectedComputer - 1;
+
+        if (index >= 0 && index < computerDesktops.Length)
+        {
+            computerDesktops[index].SetActive(true);
+
+            Debug.Log("Displaying Desktop " + selectedComputer);
+        }
+        else
+        {
+            Debug.LogError("Invalid computer number: " + selectedComputer);
+        }
     }
 
     private void Update()
     {
+        if (isClosing)
+            return;
+
         if (Keyboard.current != null &&
             Keyboard.current.escapeKey.wasPressedThisFrame)
         {
-            CloseComputer();
+            Scene desktopScene = gameObject.scene;
+
+            if (!desktopScene.isLoaded)
+                return;
+
+            isClosing = true;
+
+            Debug.Log("ESC PRESSED - UNLOADING DESKTOP");
+
+            SceneManager.UnloadSceneAsync(desktopScene);
         }
-    }
-
-    public void OpenComputer(int computerNumber)
-    {
-        for (int i = 0; i < computerDesktops.Length; i++)
-        {
-            computerDesktops[i].SetActive(i == computerNumber - 1);
-        }
-    }
-
-    public void CloseComputer()
-    {
-        if (playerController != null)
-        {
-            playerController.enabled = true;
-        }
-
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-
-        SceneManager.UnloadSceneAsync("ComputerDesktop");
     }
 }

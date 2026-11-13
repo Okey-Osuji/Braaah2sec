@@ -634,11 +634,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ComputerDesktopManager
   computerDesktops:
-  - {fileID: 5819149455792338103, guid: 1bff3e578e008a042930e4fbac82442e, type: 3}
-  - {fileID: 2143780193704073035, guid: 432e9cad7977162409f5b52435043d3f, type: 3}
-  - {fileID: 5975465411439023937, guid: 6fcfcb3a83a5ea94187fab679067bd4a, type: 3}
-  - {fileID: 3817936123142305035, guid: 848b99f71358f034195023b63f32110e, type: 3}
-  - {fileID: 5900944449906469731, guid: dcf5d44185b25bc429e137f60a5b6be5, type: 3}
+  - {fileID: 1420510794}
+  - {fileID: 704894843}
+  - {fileID: 593015844}
+  - {fileID: 585383921}
+  - {fileID: 532230460}
 --- !u!4 &25031679
 Transform:
   m_ObjectHideFlags: 0
