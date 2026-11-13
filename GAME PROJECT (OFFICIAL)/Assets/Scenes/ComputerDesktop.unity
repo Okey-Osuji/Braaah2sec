@@ -604,6 +604,56 @@ RectTransform:
   m_AnchoredPosition: {x: 47, y: 0}
   m_SizeDelta: {x: 900, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &25031677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 25031679}
+  - component: {fileID: 25031678}
+  m_Layer: 0
+  m_Name: ComputerDesktopManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &25031678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25031677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00a569e0f2efdff4090e439d50e8d28a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ComputerDesktopManager
+  computerDesktops:
+  - {fileID: 5819149455792338103, guid: 1bff3e578e008a042930e4fbac82442e, type: 3}
+  - {fileID: 2143780193704073035, guid: 432e9cad7977162409f5b52435043d3f, type: 3}
+  - {fileID: 5975465411439023937, guid: 6fcfcb3a83a5ea94187fab679067bd4a, type: 3}
+  - {fileID: 3817936123142305035, guid: 848b99f71358f034195023b63f32110e, type: 3}
+  - {fileID: 5900944449906469731, guid: dcf5d44185b25bc429e137f60a5b6be5, type: 3}
+--- !u!4 &25031679
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25031677}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.78416, y: 0, z: 5.62468}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &26783839
 GameObject:
   m_ObjectHideFlags: 0
@@ -9311,7 +9361,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &532230461
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10762,7 +10812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &585383922
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10806,7 +10856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &593015845
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13074,7 +13124,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &704894844
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16484,7 +16534,7 @@ GameObject:
   - component: {fileID: 961739751}
   - component: {fileID: 961739750}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: desktop camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25091,7 +25141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1420510795
 RectTransform:
   m_ObjectHideFlags: 0
@@ -36400,3 +36450,4 @@ SceneRoots:
   - {fileID: 203844589}
   - {fileID: 467450313}
   - {fileID: 938666457}
+  - {fileID: 25031679}
