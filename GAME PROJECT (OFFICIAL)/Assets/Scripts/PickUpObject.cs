@@ -7,6 +7,10 @@ public class PickUpObject : MonoBehaviour
     [SerializeField] private float particleRange = 3f;
     [SerializeField] private ParticleSystem auraParticles;
 
+    [Header("Drop Safety")]
+    [SerializeField] private float dropSurfaceProbeHeight = 10f;
+    [SerializeField] private float dropClearance = 0.05f;
+
     private Rigidbody rb;
 
     public bool IsHeld { get; private set; } // Lets goals ignore an object while the player is holding it
@@ -64,16 +68,20 @@ public class PickUpObject : MonoBehaviour
 
     public void Drop()
     {
-        // Detaches first, then return control of the object to the physics system
+        // Remember the held object's horizontal drop location before detaching.
+        Vector3 dropPosition = transform.position;
         transform.SetParent(null);
         Physics.SyncTransforms();
 
-        // The held position can overlap a table, wall, or floor when the player
-        // looks down. Lift the item clear of its collider before physics resumes.
+        // If the camera is pointed down, the HoldPoint can be below the floor.
+        // Find the nearest upward-facing surface below that location and place
+        // the item above it before making the Rigidbody dynamic again.
         Collider itemCollider = GetComponent<Collider>();
-        if (itemCollider != null)
+        if (itemCollider != null && TryFindDropSurface(dropPosition, out RaycastHit surfaceHit))
         {
-            rb.position = transform.position + Vector3.up * (itemCollider.bounds.extents.y + 0.05f);
+            float colliderCenterOffset = itemCollider.bounds.center.y - rb.position.y;
+            float centerHeightAboveSurface = itemCollider.bounds.extents.y - colliderCenterOffset + dropClearance;
+            rb.position = surfaceHit.point + Vector3.up * centerHeightAboveSurface;
         }
 
         // Auto Sync Transforms is disabled in this project. Register the final
@@ -85,6 +93,32 @@ public class PickUpObject : MonoBehaviour
         rb.angularVelocity = Vector3.zero;
         rb.WakeUp();
         IsHeld = false;
+    }
+
+    private bool TryFindDropSurface(Vector3 position, out RaycastHit surfaceHit)
+    {
+        Vector3 rayOrigin = position + Vector3.up * dropSurfaceProbeHeight;
+        RaycastHit[] hits = Physics.RaycastAll(rayOrigin, Vector3.down, dropSurfaceProbeHeight * 2f,
+            Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore);
+
+        System.Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
+        foreach (RaycastHit hit in hits)
+        {
+            if (hit.collider.transform == transform || hit.collider.transform.IsChildOf(transform))
+            {
+                continue;
+            }
+
+            // Ignore walls and undersides; the item needs a surface that can support it.
+            if (hit.normal.y > 0.5f)
+            {
+                surfaceHit = hit;
+                return true;
+            }
+        }
+
+        surfaceHit = default;
+        return false;
     }
 
     public void MoveToHoldPoint(Vector3 targetPosition)

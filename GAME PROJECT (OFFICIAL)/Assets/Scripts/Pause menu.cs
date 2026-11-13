@@ -16,8 +16,9 @@ public class PauseMenu : MonoBehaviour
         controlsPanel.SetActive(false);
 
         Time.timeScale = 1f;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // Gameplay uses the mouse position to click keypad objects.
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
   void Update()
@@ -59,8 +60,9 @@ public class PauseMenu : MonoBehaviour
 
         Time.timeScale = 1f;
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // Keep the pointer available for in-world clicks after resuming.
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void OpenControls()
